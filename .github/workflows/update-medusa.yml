@@ -10,7 +10,13 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-    uses: medusajs/medusa-update-action@beta
-    secrets:
-      github-token: ${{ secrets.GITHUB_TOKEN }}
-      anthropics-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Update Medusa
+        uses: medusajs/medusa-update-action@beta
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          anthropic-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
