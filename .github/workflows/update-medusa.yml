@@ -1,0 +1,16 @@
+name: Update Medusa
+
+# TODO add dispatch run
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    # Required for opening PRs
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: medusajs/medusa-update-action@beta
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+      anthropics-api-key: ${{ secrets.ANTHROPIC_API_KEY }}
