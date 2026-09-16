@@ -3,7 +3,7 @@ import { useEffect } from "react"
 import { useSearchParams } from "react-router-dom"
 
 const DEMO_EMAIL = "demo@medusajs.com"
-const DEMO_PASSWORD = "demo"
+const DEMO_PASSWORD = "28cGk_-bEvYiTuuZ-ct-vZfG"
 
 const setNativeInputValue = (element: HTMLInputElement, value: string) => {
   const descriptor = Object.getOwnPropertyDescriptor(
